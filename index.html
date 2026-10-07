@@ -9,18 +9,21 @@
   </head>
   <body>
     <div class="form-container">
-      <h2>Contact form</h2>
-      <div>Please fiil in your information and we'll besending your order.</div>
+      <h2 class="form-header">Contact form</h2>
+      <div class="about-form">
+        Please fiil in your information and we'll besending your order.
+      </div>
       <form action="">
         <fieldset>
-          <legend>Your name</legend>
-          <div>
+          <span>Your name</span>
+          <div class="inputs-row">
             <label>
               <input
                 type="text"
                 name="first-name"
                 placeholder="first name"
                 pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+                tabindex="1"
               />
             </label>
             <label>
@@ -29,17 +32,24 @@
                 name="last-name"
                 placeholder="last name"
                 pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+                tabindex="2"
               />
             </label>
           </div>
         </fieldset>
         <label>
           <span>Your email</span>
-          <input type="email" name="email" placeholder="your_mail@mail.com" />
+          <input
+            class="inputs"
+            type="email"
+            name="email"
+            placeholder="your_mail@mail.com"
+            tabindex="3"
+          />
         </label>
         <fieldset>
-          <legend>Phone *</legend>
-          <div>
+          <span>Phone *</span>
+          <div class="inputs-row">
             <label>
               <input
                 type="tel"
@@ -47,6 +57,7 @@
                 placeholder="000"
                 pattern="380"
                 required
+                tabindex="4"
               />
             </label>
             <label>
@@ -56,6 +67,7 @@
                 placeholder="000"
                 pattern="\d{3}"
                 required
+                tabindex="5"
               />
             </label>
             <label>
@@ -65,13 +77,14 @@
                 placeholder="0000"
                 pattern="\d{4}"
                 required
+                tabindex="6"
               />
             </label>
           </div>
         </fieldset>
         <label>
           <span>Message subject *</span>
-          <select name="subject" required>
+          <select class="inputs" name="subject" required tabindex="7">
             <option value="other">Other</option>
             <option value="appeal">Appeal</option>
             <option value="question">Question</option>
@@ -80,9 +93,14 @@
         </label>
         <label>
           <span>Message *</span>
-          <textarea name="message" required></textarea>
+          <textarea
+            class="inputs"
+            name="message"
+            required
+            tabindex="8"
+          ></textarea>
         </label>
-        <button type="submit">SUBMIT FORM</button>
+        <button class="submit-btn" type="submit">SUBMIT FORM</button>
       </form>
     </div>
   </body>
