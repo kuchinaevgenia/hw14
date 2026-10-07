@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Contact form</h2>
+      <div>Please fiil in your information and we'll besending your order.</div>
+      <form action="">
+        <fieldset>
+          <legend>Your name</legend>
+          <div>
+            <label>
+              <input
+                type="text"
+                name="first-name"
+                placeholder="first name"
+                pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+              />
+            </label>
+            <label>
+              <input
+                type="text"
+                name="last-name"
+                placeholder="last name"
+                pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+              />
+            </label>
+          </div>
+        </fieldset>
+        <label>
+          <span>Your email</span>
+          <input type="email" name="email" placeholder="your_mail@mail.com" />
+        </label>
+        <fieldset>
+          <legend>Phone *</legend>
+          <div>
+            <label>
+              <input
+                type="tel"
+                name="tel1"
+                placeholder="000"
+                pattern="380"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="tel"
+                name="tel2"
+                placeholder="000"
+                pattern="\d{3}"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="tel"
+                name="tel3"
+                placeholder="0000"
+                pattern="\d{4}"
+                required
+              />
+            </label>
+          </div>
+        </fieldset>
+        <label>
+          <span>Message subject *</span>
+          <select name="subject" required>
+            <option value="other">Other</option>
+            <option value="appeal">Appeal</option>
+            <option value="question">Question</option>
+            <option value="comment">Comment</option>
+          </select>
+        </label>
+        <label>
+          <span>Message *</span>
+          <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">SUBMIT FORM</button>
+      </form>
+    </div>
+  </body>
+</html>
