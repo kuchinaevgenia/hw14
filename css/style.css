@@ -33,21 +33,20 @@ body {
   font-size: 14px;
 }
 
-form {
+.form-body {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-fieldset,
-form > label {
+.categ-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
 
-span {
+.text-tag {
   display: block;
   font-size: 14px;
 }
@@ -63,7 +62,7 @@ span {
   gap: 15px;
 }
 
-.inputs-row > label {
+.row-label {
   flex: 1;
   display: block;
 }

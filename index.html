@@ -13,11 +13,11 @@
       <div class="about-form">
         Please fiil in your information and we'll besending your order.
       </div>
-      <form action="">
-        <fieldset>
-          <span>Your name</span>
+      <form class="form-body" action="">
+        <fieldset class="categ-item">
+          <span class="text-tag">Your name</span>
           <div class="inputs-row">
-            <label>
+            <label class="row-label">
               <input
                 type="text"
                 name="first-name"
@@ -26,7 +26,7 @@
                 tabindex="1"
               />
             </label>
-            <label>
+            <label class="row-label">
               <input
                 type="text"
                 name="last-name"
@@ -37,8 +37,8 @@
             </label>
           </div>
         </fieldset>
-        <label>
-          <span>Your email</span>
+        <label class="categ-item">
+          <span class="text-tag">Your email</span>
           <input
             class="inputs"
             type="email"
@@ -47,43 +47,43 @@
             tabindex="3"
           />
         </label>
-        <fieldset>
-          <span>Phone *</span>
+        <fieldset class="categ-item">
+          <span class="text-tag">Phone *</span>
           <div class="inputs-row">
-            <label>
+            <label class="row-label">
               <input
                 type="tel"
                 name="tel1"
                 placeholder="000"
-                pattern="380"
+                pattern="\d{3}" maxlength="3"
                 required
                 tabindex="4"
               />
-            </label>
+            </label class="row-label">
             <label>
               <input
                 type="tel"
                 name="tel2"
                 placeholder="000"
-                pattern="\d{3}"
+                pattern="\d{3}" maxlength="3"
                 required
                 tabindex="5"
               />
-            </label>
+            </label class="row-label">
             <label>
               <input
                 type="tel"
                 name="tel3"
                 placeholder="0000"
-                pattern="\d{4}"
+                pattern="\d{4}" maxlength="4"
                 required
                 tabindex="6"
               />
             </label>
           </div>
         </fieldset>
-        <label>
-          <span>Message subject *</span>
+        <label class="categ-item">
+          <span class="text-tag">Message subject *</span>
           <select class="inputs" name="subject" required tabindex="7">
             <option value="other">Other</option>
             <option value="appeal">Appeal</option>
@@ -91,8 +91,8 @@
             <option value="comment">Comment</option>
           </select>
         </label>
-        <label>
-          <span>Message *</span>
+        <label class="categ-item">
+          <span class="text-tag">Message *</span>
           <textarea
             class="inputs"
             name="message"
